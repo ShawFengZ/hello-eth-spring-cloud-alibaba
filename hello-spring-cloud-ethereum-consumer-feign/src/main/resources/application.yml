@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ethereum-consumer-feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        port: 8720
+        dashboard: localhost:8090
+
+server:
+  port: 9093
+
+feign:
+  sentinel:
+    enabled: true
+  hystrix:
+    enabled: true
+  client:
+    ethereum-provider:
+      connctTimeout: 8000
+      readTimeout: 8000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
