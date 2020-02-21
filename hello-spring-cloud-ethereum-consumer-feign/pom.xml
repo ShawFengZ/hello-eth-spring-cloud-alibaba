@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <name>hello-spring-cloud-ethereum-consumer-feign</name>
-    <url>http://www.funtl.com</url>
+    <url>http://www.shawfeng.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
     <dependencies>

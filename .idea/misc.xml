@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/hello-spring-cloud-loadBalance/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-read-consumer-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-write-consumer-feign/pom.xml" />
       </list>
     </option>
   </component>

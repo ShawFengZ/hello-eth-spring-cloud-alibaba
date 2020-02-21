@@ -12,7 +12,9 @@
         <module name="hello-spring-cloud-ethereum-consumer-feign" />
         <module name="hello-spring-cloud-ethereum-provider" />
         <module name="hello-spring-cloud-ethereum-provider (1)" />
+        <module name="hello-spring-cloud-ethereum-read-consumer-feign" />
         <module name="hello-spring-cloud-ethereum-read-provider" />
+        <module name="hello-spring-cloud-ethereum-write-consumer-feign" />
         <module name="hello-spring-cloud-ethereum-write-provider" />
         <module name="hello-spring-cloud-ethereum-write-provider (1)" />
         <module name="hello-spring-cloud-gateway" />
@@ -27,7 +29,9 @@
       <module name="hello-spring-cloud-ethereum-consumer-feign" target="1.8" />
       <module name="hello-spring-cloud-ethereum-provider" target="1.8" />
       <module name="hello-spring-cloud-ethereum-provider (1)" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-read-consumer-feign" target="1.8" />
       <module name="hello-spring-cloud-ethereum-read-provider" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-write-consumer-feign" target="1.8" />
       <module name="hello-spring-cloud-ethereum-write-provider" target="1.8" />
       <module name="hello-spring-cloud-ethereum-write-provider (1)" target="1.8" />
       <module name="hello-spring-cloud-gateway" target="1.8" />
@@ -42,7 +46,9 @@
       <module name="hello-spring-cloud-ethereum-consumer-feign" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-provider" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-provider (1)" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-read-consumer-feign" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-read-provider" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-write-consumer-feign" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-write-provider" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-write-provider (1)" options="-parameters" />
       <module name="hello-spring-cloud-gateway" options="-parameters" />

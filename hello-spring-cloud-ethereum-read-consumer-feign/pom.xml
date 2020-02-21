@@ -10,15 +10,19 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-gateway</artifactId>
+    <artifactId>hello-spring-cloud-ethereum-read-consumer-feign</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-gateway</name>
+    <name>hello-spring-cloud-ethereum-read-consumer-feign</name>
     <url>http://www.shawfeng.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
     <dependencies>
         <!-- Spring Boot Begin -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -37,28 +41,29 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!-- Spring Cloud End -->
+
+        <!-- Sentinel Begin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-        <!-- Spring Cloud End -->
+        <!-- Sentinel End -->
 
-        <!-- Commons Begin -->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>org.web3j</groupId>
+            <artifactId>core</artifactId>
         </dependency>
-        <!-- Commons Begin -->
+        <dependency>
+            <groupId>org.web3j</groupId>
+            <artifactId>console</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,7 +72,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.zxf.hello.spring.cloud.gateway.GatewayApplication</mainClass>
+                    <mainClass>com.zxf.hello.spring.cloud.ethereum.consumer.feign.EthereumConsumerFeignApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
