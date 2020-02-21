@@ -11,6 +11,10 @@
         <module name="hello-spring-cloud-alibaba-nacos-provider" />
         <module name="hello-spring-cloud-ethereum-consumer-feign" />
         <module name="hello-spring-cloud-ethereum-provider" />
+        <module name="hello-spring-cloud-ethereum-provider (1)" />
+        <module name="hello-spring-cloud-ethereum-read-provider" />
+        <module name="hello-spring-cloud-ethereum-write-provider" />
+        <module name="hello-spring-cloud-ethereum-write-provider (1)" />
         <module name="hello-spring-cloud-gateway" />
         <module name="hello-spring-cloud-loadBalance" />
       </profile>
@@ -22,6 +26,10 @@
       <module name="hello-spring-cloud-alibaba-nacos-provider" target="1.8" />
       <module name="hello-spring-cloud-ethereum-consumer-feign" target="1.8" />
       <module name="hello-spring-cloud-ethereum-provider" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-provider (1)" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-read-provider" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-write-provider" target="1.8" />
+      <module name="hello-spring-cloud-ethereum-write-provider (1)" target="1.8" />
       <module name="hello-spring-cloud-gateway" target="1.8" />
       <module name="hello-spring-cloud-loadBalance" target="1.8" />
     </bytecodeTargetLevel>
@@ -33,6 +41,10 @@
       <module name="hello-spring-cloud-alibaba-nacos-provider" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-consumer-feign" options="-parameters" />
       <module name="hello-spring-cloud-ethereum-provider" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-provider (1)" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-read-provider" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-write-provider" options="-parameters" />
+      <module name="hello-spring-cloud-ethereum-write-provider (1)" options="-parameters" />
       <module name="hello-spring-cloud-gateway" options="-parameters" />
       <module name="hello-spring-cloud-loadBalance" options="-parameters" />
     </option>

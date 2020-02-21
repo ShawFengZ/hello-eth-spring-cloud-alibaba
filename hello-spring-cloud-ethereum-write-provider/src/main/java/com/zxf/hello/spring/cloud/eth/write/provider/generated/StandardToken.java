@@ -1,10 +1,5 @@
-package com.zxf.hello.spring.cloud.ethereum.provider.generated;
+package com.zxf.hello.spring.cloud.eth.write.provider.generated;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import org.web3j.abi.EventEncoder;
 import org.web3j.abi.TypeReference;
 import org.web3j.abi.datatypes.Address;
@@ -23,6 +18,12 @@ import org.web3j.tx.Contract;
 import org.web3j.tx.TransactionManager;
 import rx.Observable;
 import rx.functions.Func1;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * <p>Auto com.zxf.hello.spring.cloud.eth.write.provider.generated code.
@@ -73,75 +74,75 @@ public class StandardToken extends Contract {
     public RemoteCall<TransactionReceipt> approve(String _spender, BigInteger _value) {
         final Function function = new Function(
                 FUNC_APPROVE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_spender), 
-                new org.web3j.abi.datatypes.generated.Uint256(_value)), 
+                Arrays.<Type>asList(new Address(_spender),
+                new Uint256(_value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<BigInteger> totalSupply() {
-        final Function function = new Function(FUNC_TOTALSUPPLY, 
-                Arrays.<Type>asList(), 
+        final Function function = new Function(FUNC_TOTALSUPPLY,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
 
     public RemoteCall<TransactionReceipt> transferFrom(String _from, String _to, BigInteger _value) {
         final Function function = new Function(
-                FUNC_TRANSFERFROM, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_from), 
-                new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_value)), 
+                FUNC_TRANSFERFROM,
+                Arrays.<Type>asList(new Address(_from),
+                new Address(_to),
+                new Uint256(_value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<TransactionReceipt> decreaseApproval(String _spender, BigInteger _subtractedValue) {
         final Function function = new Function(
-                FUNC_DECREASEAPPROVAL, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_spender), 
-                new org.web3j.abi.datatypes.generated.Uint256(_subtractedValue)), 
+                FUNC_DECREASEAPPROVAL,
+                Arrays.<Type>asList(new Address(_spender),
+                new Uint256(_subtractedValue)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<BigInteger> balanceOf(String _owner) {
-        final Function function = new Function(FUNC_BALANCEOF, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_owner)), 
+        final Function function = new Function(FUNC_BALANCEOF,
+                Arrays.<Type>asList(new Address(_owner)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
 
     public RemoteCall<TransactionReceipt> transfer(String _to, BigInteger _value) {
         final Function function = new Function(
-                FUNC_TRANSFER, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_value)), 
+                FUNC_TRANSFER,
+                Arrays.<Type>asList(new Address(_to),
+                new Uint256(_value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<TransactionReceipt> increaseApproval(String _spender, BigInteger _addedValue) {
         final Function function = new Function(
-                FUNC_INCREASEAPPROVAL, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_spender), 
-                new org.web3j.abi.datatypes.generated.Uint256(_addedValue)), 
+                FUNC_INCREASEAPPROVAL,
+                Arrays.<Type>asList(new Address(_spender),
+                new Uint256(_addedValue)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<BigInteger> allowance(String _owner, String _spender) {
-        final Function function = new Function(FUNC_ALLOWANCE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_owner), 
-                new org.web3j.abi.datatypes.Address(_spender)), 
+        final Function function = new Function(FUNC_ALLOWANCE,
+                Arrays.<Type>asList(new Address(_owner),
+                new Address(_spender)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
 
     public List<ApprovalEventResponse> getApprovalEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(APPROVAL_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(APPROVAL_EVENT, transactionReceipt);
         ArrayList<ApprovalEventResponse> responses = new ArrayList<ApprovalEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             ApprovalEventResponse typedResponse = new ApprovalEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.owner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -156,7 +157,7 @@ public class StandardToken extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, ApprovalEventResponse>() {
             @Override
             public ApprovalEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(APPROVAL_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(APPROVAL_EVENT, log);
                 ApprovalEventResponse typedResponse = new ApprovalEventResponse();
                 typedResponse.log = log;
                 typedResponse.owner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -174,9 +175,9 @@ public class StandardToken extends Contract {
     }
 
     public List<TransferEventResponse> getTransferEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(TRANSFER_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(TRANSFER_EVENT, transactionReceipt);
         ArrayList<TransferEventResponse> responses = new ArrayList<TransferEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             TransferEventResponse typedResponse = new TransferEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -191,7 +192,7 @@ public class StandardToken extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, TransferEventResponse>() {
             @Override
             public TransferEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(TRANSFER_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(TRANSFER_EVENT, log);
                 TransferEventResponse typedResponse = new TransferEventResponse();
                 typedResponse.log = log;
                 typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();

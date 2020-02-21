@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-consumer-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hello-spring-cloud-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hello-spring-cloud-loadBalance" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

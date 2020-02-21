@@ -1,10 +1,5 @@
-package com.zxf.hello.spring.cloud.ethereum.provider.generated;
+package com.zxf.hello.spring.cloud.eth.write.provider.generated;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import org.web3j.abi.EventEncoder;
 import org.web3j.abi.TypeReference;
 import org.web3j.abi.datatypes.Address;
@@ -23,6 +18,12 @@ import org.web3j.tx.Contract;
 import org.web3j.tx.TransactionManager;
 import rx.Observable;
 import rx.functions.Func1;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * <p>Auto com.zxf.hello.spring.cloud.eth.write.provider.generated code.
@@ -81,46 +82,46 @@ public class BurnableToken extends Contract {
     public RemoteCall<TransactionReceipt> burn(BigInteger _value) {
         final Function function = new Function(
                 FUNC_BURN, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(_value)), 
+                Arrays.<Type>asList(new Uint256(_value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<BigInteger> balanceOf(String _owner) {
-        final Function function = new Function(FUNC_BALANCEOF, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_owner)), 
+        final Function function = new Function(FUNC_BALANCEOF,
+                Arrays.<Type>asList(new Address(_owner)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
 
     public RemoteCall<String> owner() {
-        final Function function = new Function(FUNC_OWNER, 
-                Arrays.<Type>asList(), 
+        final Function function = new Function(FUNC_OWNER,
+                Arrays.<Type>asList(),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteCall<TransactionReceipt> transfer(String _to, BigInteger _value) {
         final Function function = new Function(
-                FUNC_TRANSFER, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_value)), 
+                FUNC_TRANSFER,
+                Arrays.<Type>asList(new Address(_to),
+                new Uint256(_value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<TransactionReceipt> transferOwnership(String newOwner) {
         final Function function = new Function(
-                FUNC_TRANSFEROWNERSHIP, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(newOwner)), 
+                FUNC_TRANSFEROWNERSHIP,
+                Arrays.<Type>asList(new Address(newOwner)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public List<BurnEventResponse> getBurnEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(BURN_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(BURN_EVENT, transactionReceipt);
         ArrayList<BurnEventResponse> responses = new ArrayList<BurnEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             BurnEventResponse typedResponse = new BurnEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.burner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -134,7 +135,7 @@ public class BurnableToken extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, BurnEventResponse>() {
             @Override
             public BurnEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(BURN_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(BURN_EVENT, log);
                 BurnEventResponse typedResponse = new BurnEventResponse();
                 typedResponse.log = log;
                 typedResponse.burner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -151,9 +152,9 @@ public class BurnableToken extends Contract {
     }
 
     public List<OwnershipTransferredEventResponse> getOwnershipTransferredEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, transactionReceipt);
         ArrayList<OwnershipTransferredEventResponse> responses = new ArrayList<OwnershipTransferredEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             OwnershipTransferredEventResponse typedResponse = new OwnershipTransferredEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.previousOwner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -167,7 +168,7 @@ public class BurnableToken extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, OwnershipTransferredEventResponse>() {
             @Override
             public OwnershipTransferredEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, log);
                 OwnershipTransferredEventResponse typedResponse = new OwnershipTransferredEventResponse();
                 typedResponse.log = log;
                 typedResponse.previousOwner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -184,9 +185,9 @@ public class BurnableToken extends Contract {
     }
 
     public List<TransferEventResponse> getTransferEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(TRANSFER_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(TRANSFER_EVENT, transactionReceipt);
         ArrayList<TransferEventResponse> responses = new ArrayList<TransferEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             TransferEventResponse typedResponse = new TransferEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -201,7 +202,7 @@ public class BurnableToken extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, TransferEventResponse>() {
             @Override
             public TransferEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(TRANSFER_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(TRANSFER_EVENT, log);
                 TransferEventResponse typedResponse = new TransferEventResponse();
                 typedResponse.log = log;
                 typedResponse.from = (String) eventValues.getIndexedValues().get(0).getValue();

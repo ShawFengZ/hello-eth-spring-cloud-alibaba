@@ -9,6 +9,10 @@
       <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/hello-spring-cloud-alibaba-nacos-provider.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/hello-spring-cloud-alibaba-nacos-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-consumer-feign/hello-spring-cloud-ethereum-consumer-feign.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-consumer-feign/hello-spring-cloud-ethereum-consumer-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-provider/hello-spring-cloud-ethereum-provider.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-provider/hello-spring-cloud-ethereum-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider/hello-spring-cloud-ethereum-provider (1).iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider/hello-spring-cloud-ethereum-provider (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider/hello-spring-cloud-ethereum-read-provider.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider/hello-spring-cloud-ethereum-read-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider/hello-spring-cloud-ethereum-write-provider.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-write-provider/hello-spring-cloud-ethereum-write-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider/hello-spring-cloud-ethereum-write-provider (1).iml" filepath="$PROJECT_DIR$/hello-spring-cloud-ethereum-read-provider/hello-spring-cloud-ethereum-write-provider (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-gateway/hello-spring-cloud-gateway.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-gateway/hello-spring-cloud-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/hello-spring-cloud-loadBalance/hello-spring-cloud-loadBalance.iml" filepath="$PROJECT_DIR$/hello-spring-cloud-loadBalance/hello-spring-cloud-loadBalance.iml" />
     </modules>

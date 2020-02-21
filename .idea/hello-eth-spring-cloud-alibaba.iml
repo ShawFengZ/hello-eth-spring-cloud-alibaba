@@ -7,6 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-ethereum-consumer-feign/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-loadBalance/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-loadBalance/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-ethereum-write-provider/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-ethereum-write-provider/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-ethereum-read-provider/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hello-spring-cloud-ethereum-read-provider/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,17 +1,8 @@
-package com.zxf.hello.spring.cloud.ethereum.provider.generated;
+package com.zxf.hello.spring.cloud.eth.write.provider.generated;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import org.web3j.abi.EventEncoder;
 import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.Bool;
-import org.web3j.abi.datatypes.Event;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.*;
 import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameter;
@@ -23,6 +14,12 @@ import org.web3j.tx.Contract;
 import org.web3j.tx.TransactionManager;
 import rx.Observable;
 import rx.functions.Func1;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * <p>Auto com.zxf.hello.spring.cloud.eth.write.provider.generated code.
@@ -102,15 +99,15 @@ public class Pausable extends Contract {
     public RemoteCall<TransactionReceipt> transferOwnership(String newOwner) {
         final Function function = new Function(
                 FUNC_TRANSFEROWNERSHIP, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(newOwner)), 
+                Arrays.<Type>asList(new Address(newOwner)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public List<PauseEventResponse> getPauseEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(PAUSE_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(PAUSE_EVENT, transactionReceipt);
         ArrayList<PauseEventResponse> responses = new ArrayList<PauseEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             PauseEventResponse typedResponse = new PauseEventResponse();
             typedResponse.log = eventValues.getLog();
             responses.add(typedResponse);
@@ -122,7 +119,7 @@ public class Pausable extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, PauseEventResponse>() {
             @Override
             public PauseEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(PAUSE_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(PAUSE_EVENT, log);
                 PauseEventResponse typedResponse = new PauseEventResponse();
                 typedResponse.log = log;
                 return typedResponse;
@@ -137,9 +134,9 @@ public class Pausable extends Contract {
     }
 
     public List<UnpauseEventResponse> getUnpauseEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(UNPAUSE_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(UNPAUSE_EVENT, transactionReceipt);
         ArrayList<UnpauseEventResponse> responses = new ArrayList<UnpauseEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             UnpauseEventResponse typedResponse = new UnpauseEventResponse();
             typedResponse.log = eventValues.getLog();
             responses.add(typedResponse);
@@ -151,7 +148,7 @@ public class Pausable extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, UnpauseEventResponse>() {
             @Override
             public UnpauseEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(UNPAUSE_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(UNPAUSE_EVENT, log);
                 UnpauseEventResponse typedResponse = new UnpauseEventResponse();
                 typedResponse.log = log;
                 return typedResponse;
@@ -166,9 +163,9 @@ public class Pausable extends Contract {
     }
 
     public List<OwnershipTransferredEventResponse> getOwnershipTransferredEvents(TransactionReceipt transactionReceipt) {
-        List<Contract.EventValuesWithLog> valueList = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, transactionReceipt);
+        List<EventValuesWithLog> valueList = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, transactionReceipt);
         ArrayList<OwnershipTransferredEventResponse> responses = new ArrayList<OwnershipTransferredEventResponse>(valueList.size());
-        for (Contract.EventValuesWithLog eventValues : valueList) {
+        for (EventValuesWithLog eventValues : valueList) {
             OwnershipTransferredEventResponse typedResponse = new OwnershipTransferredEventResponse();
             typedResponse.log = eventValues.getLog();
             typedResponse.previousOwner = (String) eventValues.getIndexedValues().get(0).getValue();
@@ -182,7 +179,7 @@ public class Pausable extends Contract {
         return web3j.ethLogObservable(filter).map(new Func1<Log, OwnershipTransferredEventResponse>() {
             @Override
             public OwnershipTransferredEventResponse call(Log log) {
-                Contract.EventValuesWithLog eventValues = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, log);
+                EventValuesWithLog eventValues = extractEventParametersWithLog(OWNERSHIPTRANSFERRED_EVENT, log);
                 OwnershipTransferredEventResponse typedResponse = new OwnershipTransferredEventResponse();
                 typedResponse.log = log;
                 typedResponse.previousOwner = (String) eventValues.getIndexedValues().get(0).getValue();

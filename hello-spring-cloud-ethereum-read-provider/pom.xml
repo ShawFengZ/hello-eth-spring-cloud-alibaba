@@ -10,10 +10,10 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-ethereum-provider</artifactId>
+    <artifactId>hello-spring-cloud-ethereum-read-provider</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-ethereum-provider</name>
+    <name>hello-spring-cloud-ethereum-read-provider</name>
     <url>http://www.shawfeng.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 

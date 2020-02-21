@@ -10,10 +10,10 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-ethereum-provider</artifactId>
+    <artifactId>hello-spring-cloud-ethereum-write-provider</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-ethereum-provider</name>
+    <name>hello-spring-cloud-ethereum-write-provider</name>
     <url>http://www.shawfeng.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -82,7 +82,7 @@
                 <artifactId>web3j-maven-plugin</artifactId>
                 <version>0.3.1</version>
                 <configuration>
-                    <packageName>com.zxf.hello.spring.cloud.ethereum.provider.com.zxf.hello.spring.cloud.eth.write.provider.generated</packageName>
+                    <packageName>com.zxf.hello.spring.cloud.ethereum.provider.generated</packageName>
                     <sourceDestination>src/main/java/</sourceDestination>
                     <nativeJavaType>true</nativeJavaType>
                     <soliditySourceFiles>
