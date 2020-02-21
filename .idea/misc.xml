@@ -10,11 +10,12 @@
         <option value="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-consumer-feign/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-alibaba-nacos-provider/pom.xml" />
-        <option value="$PROJECT_DIR$/hello-spring-cloud-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-provider/pom.xml" />
         <option value="$PROJECT_DIR$/hello-spring-cloud-ethereum-consumer-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-spring-cloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/hello-spring-cloud-loadBalance/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

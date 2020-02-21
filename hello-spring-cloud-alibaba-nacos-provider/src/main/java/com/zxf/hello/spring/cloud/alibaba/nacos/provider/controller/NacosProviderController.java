@@ -18,16 +18,16 @@ public class NacosProviderController {
     private String port;
 
     // 注入配置的上下文
-    @Autowired
-    private ConfigurableApplicationContext applicationContext;
+    /*@Autowired
+    private ConfigurableApplicationContext applicationContext;*/
 
     @GetMapping(value = "/echo/{message}")
     public String echo(@PathVariable(value = "message") String message) {
-        return "Hello Nacos Discovery " + message + ", i am from port " + port;
+        return "Hello Nacos Discovery " + message+ ", i am from port "+ port;
     }
 
-    @GetMapping(value = "/hi")
+    /*@GetMapping(value = "/hi")
     public String sayHi(){
         return "Hello " + applicationContext.getEnvironment().getProperty("user.name");
-    }
+    }*/
 }

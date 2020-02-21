@@ -32,7 +32,6 @@ public class DeployContract {
                 "D:/Sol/keystore/UTC--2019-04-08T06-49-39.830734661Z--53d19c95c04c76b5b32e29926ca9b16ed70e60f2"
         );
         DevToken devToken = DevToken.deploy(web3j, credentials, BigInteger.valueOf(200000), BigInteger.valueOf(2000000)).send();
-        System.out.println(devToken.getContractAddress());
         return devToken.getContractAddress();
     }
 }
